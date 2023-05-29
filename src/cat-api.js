@@ -12,3 +12,14 @@ method: 'GET',
       }
       return response.json();
     })};
+
+
+
+   export function fetchCatByBree(id) {
+    return fetch(`https://api.thecatapi.com/v1/images/search?&breed_ids=${id}&api_key=${MY_KEY}`)
+  .then(response => {
+      if (!response.ok) {
+        throw new Error(response.status);
+    }
+      return response.json();
+  })};

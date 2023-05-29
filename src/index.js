@@ -1,5 +1,6 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { fetchBreeds } from './cat-api.js';
+import { fetchCatByBree } from './cat-api.js';
 // import SlimSelect from 'slim-select';
 
 const fetchUsersSelect = document.querySelector(".breed-select");
@@ -32,25 +33,17 @@ function onClickSelect(event) {
    id = fetchUsersSelect.value;
     fetchCatByBree(id)
         .then((cats) => renderUserList(cats))
-        .catch((error) => {
+      .catch((error) => {
+          loading.style.display = 'none'
         Notify.failure(`❌ Oops! Something went wrong! Try reloading the page!`);
         })};
 
         fetchBreeds()
       .then((list) => catList(list))
-            .catch((error) => {
-                Notify.failure(`❌ Oops! Something went wrong! Try reloading the page!`)
+          .catch((error) => {
+              Notify.failure(`❌ Oops! Something went wrong! Try reloading the page!`)
             });
 
-    
-function fetchCatByBree(id) {
-    return fetch(`https://api.thecatapi.com/v1/images/search?&breed_ids=${id}&api_key=${MY_KEY}`)
-  .then(response => {
-      if (!response.ok) {
-        throw new Error(response.status);
-    }
-      return response.json();
-  })};
 
 
 function catList(list) {
