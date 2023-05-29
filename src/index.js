@@ -1,6 +1,6 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { fetchBreeds } from './cat-api.js';
-import SlimSelect from 'slim-select';
+// import SlimSelect from 'slim-select';
 
 const fetchUsersSelect = document.querySelector(".breed-select");
 const sd = document.querySelector('div');
@@ -8,7 +8,7 @@ const loading = document.querySelector('.loader');
 const error = document.querySelector('.error')
 
   
-fetchUsersSelect.id = "selectElement"
+// fetchUsersSelect.id = "selectElement"
 fetchUsersSelect.style.marginBottom = '40px'
 fetchUsersSelect.style.width = '200px'
 loading.style.display = 'none'
@@ -18,9 +18,9 @@ sd.style.display = 'flex'
 sd.style.gap = '40px'
 
 const MY_KEY = 'live_iLRatPSgAlxnJZrz1YeGqrOIZ5K0LdV64DMc4pzsCdqTdBslQZVWkBUOGYdaTPBL'
-new SlimSelect({
-  select: '#selectElement'
-})
+// new SlimSelect({
+//   select: '#selectElement'
+// })
 fetchUsersSelect.addEventListener("input", onClickSelect);
 
 
