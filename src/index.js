@@ -44,7 +44,6 @@ function onClickSelect(event) {
             });
 
 
-
 function catList(list) {
         const markup1 = list
         .map((list) => {
