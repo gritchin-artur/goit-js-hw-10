@@ -18,7 +18,6 @@ sd.style.listStyle = 'none'
 sd.style.display = 'flex'
 sd.style.gap = '40px'
 
-const MY_KEY = 'live_iLRatPSgAlxnJZrz1YeGqrOIZ5K0LdV64DMc4pzsCdqTdBslQZVWkBUOGYdaTPBL'
 // new SlimSelect({
 //   select: '#selectElement'
 // })
