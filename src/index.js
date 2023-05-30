@@ -28,7 +28,7 @@ function onClickSelect(event) {
     if (event) {
         loading.style.display = 'flex'
     }
-    console.log(fetchUsersSelect.value);
+    // console.log(fetchUsersSelect.value);
    id = fetchUsersSelect.value;
     fetchCatByBree(id)
         .then((cats) => renderUserList(cats))
