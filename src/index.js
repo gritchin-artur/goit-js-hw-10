@@ -23,7 +23,6 @@ sd.style.gap = '40px'
 // })
 fetchUsersSelect.addEventListener("input", onClickSelect);
 
-
 function onClickSelect(event) {
     if (event) {
         loading.style.display = 'flex'
